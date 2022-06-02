@@ -4,6 +4,33 @@
 > 
 > "É mesmo?", disse Sicrano
 
+``` c++
+//To calculate each oscillator’s output in render():
+//  Get the next sample of this oscillator
+//•
+//Task: fix additive-synth so that oscillators above the Nyquist rate are muted
+//Problem: even with a limited number of harmonics, we might still have aliasing!
+//‣
+
+for(unsigned int n = 0; n < context->audioFrames; n++) {
+ float out = 0;
+ // Step through all the oscillators in the array
+ for(unsigned int i = 0; i < gOscillators.size(); i++) {
+ // Mix in the output of this oscillator
+ out += gAmplitudes[i] * gOscillators[i].process();
+ }
+ // Scale global amplitude
+ out *= amplitude;
+ for(unsigned int channel = 0; channel < context->audioOutChannels; channel++) {
+ // Write the sample to every audio output channel
+ }
+audioWrite(context, n, channel, out);
+  // Write the output to the oscilloscope
+ gScope.log(out);
+ }
+ 
+```
+
 Android | iOS
 --- | ---
 App 1 | App 2

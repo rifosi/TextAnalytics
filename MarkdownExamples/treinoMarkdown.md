@@ -4,6 +4,12 @@
 > 
 > "É mesmo?", disse Sicrano
 
+Android | iOS
+--- | ---
+App 1 | App 2
+Environment A | Environment B
+[download aqui](https://rifosi.com.br) | [UOL aqui](https://uol.com.br)
+![](https://upload.wikimedia.org/wikipedia/commons/0/0a/Unofficial_Windows_logo_variant_-_2002%E2%80%932012_%28Multicolored%29.svg) | ![](ios.png)
 # Cabeçalho1
 ## Cabeçalho2
 ###### Cabeçalho6
@@ -25,3 +31,5 @@
 4.  segundo elemento
 5.  primeiro elemento
 6. segundo elemento 
+
+
